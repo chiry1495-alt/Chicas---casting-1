@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Anuncios de casting y oportunidades audiovisuales para personas adultas.">
+<title>Chicas Casting | Castings y producción</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">▶</span><span>CHICAS <b>CASTING</b><small>CASTINGS · TALENTO · PRODUCCIÓN</small></span></a>
+  <nav><a href="#anuncios">Anuncios</a><a href="#como">Cómo funciona</a><a href="#contacto">Contacto</a></nav>
+  <a class="admin-link" href="admin.html">Acceso privado</a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">CASTINGS · TALENTO · PRODUCCIÓN</p>
+    <h1>Tu próximo casting <em>empieza aquí</em></h1>
+    <p class="lead">Anuncios profesionales, oportunidades audiovisuales y contacto directo con las personas responsables de cada convocatoria.</p>
+    <div class="trust"><span>✓ Anuncios revisados</span><span>✓ Solo mayores de 18 años</span><span>✓ Privacidad y consentimiento</span></div>
+    <a class="button" href="#anuncios">Ver anuncios <span>→</span></a>
+  </div>
+  <div class="hero-art" aria-label="Estudio de producción audiovisual"><div class="lens"></div><div class="art-label">18+<small>Solo adultos</small></div></div>
+</section>
+<section class="searchbar" aria-label="Buscar anuncios">
+  <input id="q" placeholder="Buscar por palabras clave…" aria-label="Palabras clave">
+  <select id="city" aria-label="Filtrar por ciudad"><option value="">Todas las ciudades</option></select>
+  <select id="category" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select>
+  <button class="button" id="search">Buscar</button>
+</section>
+<section class="section" id="anuncios">
+  <div class="section-head"><div><p class="eyebrow">OPORTUNIDADES ACTUALES</p><h2>Últimos anuncios</h2></div><span class="muted" id="count"></span></div>
+  <div id="listings" class="cards"><p class="muted">Cargando anuncios…</p></div>
+  <p id="empty" class="empty hidden">No hay anuncios que coincidan con la búsqueda.</p>
+</section>
+<section class="info-grid" id="como">
+  <article><span class="icon">▣</span><h3>Cómo funciona</h3><p>Consulta los anuncios y revisa cuidadosamente los requisitos y condiciones antes de contactar.</p></article>
+  <article><span class="icon">◎</span><h3>Participación voluntaria</h3><p>Las convocatorias deben explicar el proyecto, las condiciones y el proceso de selección.</p></article>
+  <article><span class="icon">♙</span><h3>Privacidad primero</h3><p>Comparte únicamente la información necesaria y comprueba la identidad de quien publica.</p></article>
+  <article id="contacto"><span class="icon">✉</span><h3>Contacto</h3><p>¿Tienes dudas sobre una convocatoria?</p><a id="contactEmail" href="mailto:contacto@example.com">Escribir por correo →</a></article>
+</section>
+</main>
+<footer><a class="brand" href="#"><span class="mark">▶</span><span>CHICAS <b>CASTING</b><small>CASTINGS · TALENTO · PRODUCCIÓN</small></span></a><p>Solo para mayores de 18 años. Consulta las condiciones y la política de privacidad antes de participar.</p><small>© <span id="year"></span> Chicas Casting</small></footer>
+<dialog id="detail"><button class="close" id="closeDetail" aria-label="Cerrar">×</button><div id="detailBody"></div></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>

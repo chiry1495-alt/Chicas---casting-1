@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administración | Chicas Casting</title><link rel="stylesheet" href="styles.css"></head>
+<body class="admin-page">
+<header class="topbar"><a class="brand" href="index.html"><span class="mark">▶</span><span>CHICAS <b>CASTING</b><small>ADMINISTRACIÓN PRIVADA</small></span></a><a href="index.html">Ver web pública ↗</a></header>
+<main class="admin-wrap">
+  <section id="loginPanel" class="panel narrow"><p class="eyebrow">ZONA PRIVADA</p><h1>Acceso de administración</h1><p class="muted">Inicia sesión con el usuario que hayas creado en tu proyecto de Supabase.</p>
+  <form id="loginForm"><label>Correo de administrador<input type="email" id="loginEmail" required autocomplete="username"></label><label>Contraseña<input type="password" id="loginPassword" required autocomplete="current-password"></label><button class="button" type="submit">Iniciar sesión</button></form><p id="loginMsg" class="message"></p></section>
+  <section id="dashboard" class="hidden">
+    <div class="section-head"><div><p class="eyebrow">PANEL PRIVADO</p><h1>Gestionar anuncios</h1></div><button id="logout" class="button secondary">Cerrar sesión</button></div>
+    <section class="panel"><h2 id="formTitle">Crear anuncio</h2><form id="adForm" class="form-grid">
+      <input type="hidden" id="adId"><label>Título<input id="title" required maxlength="100"></label>
+      <label>Ciudad<input id="location" required maxlength="80" placeholder="Madrid"></label>
+      <label>Categoría<select id="adCategory"><option>Casting</option><option>Vídeo / Fotografía</option><option>Cine / Película</option><option>Contenido digital</option><option>Otro</option></select></label>
+      <label>Fecha límite<input type="date" id="deadline"></label>
+      <label>Estado<select id="status"><option value="draft">Borrador</option><option value="published">Publicado</option><option value="closed">Cerrado</option></select></label>
+      <label>Imagen del anuncio<input type="file" id="photo" accept="image/jpeg,image/png,image/webp"><small>JPG, PNG o WebP. Usa solo imágenes con autorización de publicación.</small></label>
+      <label class="full">Descripción<textarea id="description" rows="6" required maxlength="5000"></textarea></label>
+      <label>Correo de contacto<input type="email" id="email" required></label>
+      <div class="form-actions"><button class="button" type="submit">Guardar anuncio</button><button class="button secondary" id="resetForm" type="button">Limpiar</button></div>
+    </form><p id="formMsg" class="message"></p></section>
+    <section class="panel"><h2>Anuncios existentes</h2><div id="adminListings" class="admin-list"></div></section>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="admin.js"></script>
+</body></html>
